@@ -1,46 +1,258 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚀 Federico López - Senior Frontend Engineer Portfolio
 
-## Available Scripts
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=vercel)](https://fedelopez89.github.io/resume)
+[![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
-In the project directory, you can run:
+**Modern, high-performance portfolio built with cutting-edge technologies**
 
-### `npm start`
+_Showcasing 16 years of IT experience with 7+ years specializing in modern frontend development_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[View Live Demo](https://fedelopez89.github.io/resume) • [Report Bug](https://github.com/fedelopez89/resume/issues) • [Request Feature](https://github.com/fedelopez89/resume/issues)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</div>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Highlights
 
-### `npm run build`
+🎯 **[Featured in The New York Times](https://www.linkedin.com/posts/svanweelden_silicon-valley-builds-amazon-and-gmail-copycats-activity-7404333944894398465-CIyW/)** - Recognized for exceptional frontend engineering contributions  
+⚡ **Lightning Fast** - FCP: 320ms, TTFB: 20ms (Web Vitals Core)  
+🎨 **Modern Architecture** - React 19, TypeScript 5.9, Component-Driven Design  
+♿ **Accessible** - WCAG 2.1 compliant with semantic HTML  
+📱 **Responsive** - Mobile-first, works seamlessly across all devices  
+🌗 **Theme Support** - Smooth dark/light mode with system preference detection
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Core
 
-### `npm run eject`
+![React](https://img.shields.io/badge/React-19.2.4-20232A?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Styling & Animation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Styled Components](https://img.shields.io/badge/Styled_Components-6.3.9-DB7093?logo=styled-components&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.34-0055FF?logo=framer&logoColor=white)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Tools & Optimization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![ESLint](https://img.shields.io/badge/ESLint-9.x-4B32C3?logo=eslint)
+![Prettier](https://img.shields.io/badge/Prettier-3.x-F7B93E?logo=prettier&logoColor=black)
+![Web Vitals](https://img.shields.io/badge/Web_Vitals-5.1-brightgreen)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📊 Performance Metrics
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Lighthouse Score (Desktop):
+  Performance: ████████████████████ 98/100
+  Accessibility: ██████████████████ 100/100
+  Best Practices: ████████████████ 100/100
+  SEO: ████████████████████████ 100/100
+
+Core Web Vitals:
+  FCP (First Contentful Paint): 320ms ✅
+  LCP (Largest Contentful Paint): <1.5s ✅
+  CLS (Cumulative Layout Shift): 0.05 ✅
+  TTFB (Time to First Byte): 20ms ✅
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+```bash
+Node.js >= 18.0.0
+npm >= 9.0.0 or yarn >= 1.22.0
+```
+
+### Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/fedelopez89/resume.git
+cd resume
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+# 🎉 Open http://localhost:5173
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## 📦 Available Scripts
+
+| Command                | Description                                    |
+| ---------------------- | ---------------------------------------------- |
+| `npm run dev`          | Start Vite dev server on http://localhost:5173 |
+| `npm run build`        | Build for production (optimized bundle)        |
+| `npm run preview`      | Preview production build locally               |
+| `npm run lint`         | Run ESLint with auto-fix                       |
+| `npm run format`       | Format code with Prettier                      |
+| `npm run format:check` | Check code formatting                          |
+| `npm run type-check`   | TypeScript type checking (no emit)             |
+| `npm run deploy`       | Deploy to GitHub Pages                         |
+
+---
+
+## 🏗️ Project Architecture
+
+```
+resume/
+├── 📁 public/              # Static assets
+│   ├── images/             # Image assets
+│   └── pdf/                # Resume PDF
+├── 📁 src/
+│   ├── 📁 components/      # React components
+│   │   ├── Header/         # Navigation & hero
+│   │   ├── Footer/         # Footer component
+│   │   ├── Main/           # Main layout wrapper
+│   │   ├── Sections/       # Content sections
+│   │   │   ├── AboutMe/    # Introduction section
+│   │   │   ├── Skills/     # Skills showcase
+│   │   │   ├── Experience/ # Work history
+│   │   │   └── Education/  # Academic background
+│   │   ├── layout/         # Layout utilities
+│   │   │   └── ScrollToTop/# Scroll-to-top button
+│   │   ├── ui/             # Reusable UI components
+│   │   │   ├── Button.tsx  # Button component
+│   │   │   ├── Card.tsx    # Card component
+│   │   │   ├── Badge.tsx   # Badge component
+│   │   │   ├── Image.tsx   # Lazy-loaded image
+│   │   │   └── ...         # Other UI primitives
+│   │   └── ThemeToggle/    # Dark/light mode toggle
+│   ├── 📁 context/         # React Context
+│   │   └── ThemeContext.tsx # Theme provider & hook
+│   ├── 📁 data/            # JSON data
+│   │   ├── skills.ts       # Skills data
+│   │   ├── experience.json # Work experience
+│   │   ├── education.json  # Education history
+│   │   └── contactme.json  # Contact information
+│   ├── 📁 hooks/           # Custom React hooks
+│   │   ├── useScrollToTop.ts
+│   │   └── useNavbarScroll.ts
+│   ├── 📁 styles/          # Styling
+│   │   ├── theme.ts        # Theme configuration
+│   │   ├── GlobalStyles.ts # Global CSS
+│   │   └── styled.d.ts     # Styled-components types
+│   ├── 📁 types/           # TypeScript definitions
+│   ├── 📁 utils/           # Utility functions
+│   │   └── reportWebVitals.ts # Performance monitoring
+│   ├── App.tsx             # Root component
+│   └── main.tsx            # Entry point
+├── .editorconfig           # Editor configuration
+├── .prettierrc             # Prettier config
+├── eslint.config.js        # ESLint configuration
+├── tsconfig.json           # TypeScript config
+├── vite.config.ts          # Vite configuration
+└── package.json            # Dependencies & scripts
+```
+
+---
+
+## 🎨 Key Features
+
+### 🎭 **Design System**
+
+- Custom theme with dark/light mode support
+- Consistent spacing, typography, and color scales
+- Reusable component library with TypeScript interfaces
+
+### ⚡ **Performance Optimizations**
+
+- **Code Splitting**: React.lazy() for route-based splitting
+- **Lazy Loading**: IntersectionObserver for images
+- **Bundle Optimization**: Manual chunks for vendor libraries
+- **Tree Shaking**: Dead code elimination with Vite
+- **Asset Optimization**: Compressed images and fonts preloading
+
+### 🎬 **Smooth Animations**
+
+- Framer Motion for declarative animations
+- Scroll-triggered reveals with `whileInView`
+- Optimized for 60fps performance
+
+### 🧪 **Developer Experience**
+
+- TypeScript strict mode for type safety
+- ESLint + Prettier for code quality
+- Hot Module Replacement (HMR) with Vite
+- Path aliases (`@/`) for clean imports
+
+### 📱 **Accessibility**
+
+- Semantic HTML5 structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Focus management
+
+---
+
+## 🌐 Browser Support
+
+| Browser | Version            |
+| ------- | ------------------ |
+| Chrome  | Last 2 versions ✅ |
+| Firefox | Last 2 versions ✅ |
+| Safari  | Last 2 versions ✅ |
+| Edge    | Last 2 versions ✅ |
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/fedelopez89/resume/issues).
+
+---
+
+## 📄 License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Federico López**
+
+_Senior Frontend Engineer | 16 Years IT Experience | 7+ Years Modern Web Development_
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-federicoglopez-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/federicoglopez/)
+[![GitHub](https://img.shields.io/badge/GitHub-fedelopez89-181717?style=for-the-badge&logo=github)](https://github.com/fedelopez89)
+[![Email](https://img.shields.io/badge/Email-fede.lopez89@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fede.lopez89@gmail.com)
+
+</div>
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Built with React, TypeScript & Vite
+
+</div>

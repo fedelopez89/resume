@@ -40,8 +40,11 @@ const Header: FC = () => {
   const { isScrolled } = useNavbarScroll(100);
 
   return (
-    <HeaderContainer id="home">
+    <HeaderContainer id="home" as="header" role="banner">
       <Navbar
+        as="nav"
+        role="navigation"
+        aria-label="Main navigation"
         $isScrolled={isScrolled}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -50,25 +53,36 @@ const Header: FC = () => {
         <NavContainer>
           <Logo
             href="#home"
+            aria-label="Home"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             HOME
           </Logo>
           <NavMenu
+            as="ul"
+            role="menubar"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
             {navItems.map((item, index) => (
               <NavItem
+                as="li"
+                role="none"
                 key={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ y: -2 }}
               >
-                <NavLink href={item.href}>{item.label}</NavLink>
+                <NavLink
+                  href={item.href}
+                  role="menuitem"
+                  aria-label={item.label}
+                >
+                  {item.label}
+                </NavLink>
               </NavItem>
             ))}
           </NavMenu>
@@ -85,7 +99,7 @@ const Header: FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          Federico G. López
+          Federico López
         </Title>
         <Role
           initial={{ opacity: 0, y: 20 }}

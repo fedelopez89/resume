@@ -19,7 +19,7 @@ const AboutMe: FC = () => {
         <p>
           Hi! I'm{' '}
           <strong>
-            <u>Federico Gabriel López</u>
+            <u>Federico López</u>
           </strong>
           , a Senior Frontend Engineer with{' '}
           <strong>16 years of IT experience</strong> and{' '}
@@ -31,7 +31,14 @@ const AboutMe: FC = () => {
           <strong>Next.js</strong>, I focus on building high-performance,
           scalable, and user-centric interfaces. My work has been{' '}
           <strong>
-            recognized by industry leaders and featured in The New York Times
+            <a
+              href="https://www.linkedin.com/posts/svanweelden_silicon-valley-builds-amazon-and-gmail-copycats-activity-7404333944894398465-CIyW/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit', textDecoration: 'underline' }}
+            >
+              recognized by industry leaders and featured in The New York Times
+            </a>
           </strong>{' '}
           for exceptional frontend engineering contributions.
         </p>

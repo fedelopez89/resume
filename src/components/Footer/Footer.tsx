@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import contactme from '../../data/contactme.json';
+import contactme from '../../data/contact-me.json';
 import type { ContactItem } from '@/types';
 import {
   FooterContainer,
