@@ -1,8 +1,7 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import { FC } from 'react';
+import { Header, Main, Footer } from '@components';
 
-function App() {
+const App: FC = () => {
   return (
     <>
       <Header />
@@ -10,6 +9,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

@@ -1,65 +1,34 @@
-import { createElement } from "react";
-import AboutMe from "../Sections/AboutMe/AboutMe";
-import Education from "../Sections/Education/Education";
-import Experience from "../Sections/Experience/Experience";
-import Skills from "../Sections/Skills/Skills";
+import { FC } from 'react';
+import { AboutMe, Skills, Experience, Education } from '../Sections';
+import { ScrollToTopButton } from '../layout/ScrollToTop';
 import './main.css';
 
-type sectionPageType = {
-    id: string;
-    component: () => JSX.Element;
-}[]
-
-const sectionsPage: sectionPageType = [{ id: "aboutme", component: AboutMe }, { id: "skills", component: Skills }, { id: "experience", component: Experience }, { id: "education", component: Education }];
-
-const mybutton = document.getElementById("myBtn");
-
-const topFunction = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+interface Section {
+  id: string;
+  component: FC;
 }
 
-const scrollFunction = () => {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        if (mybutton) {
-            mybutton.style.display = "block"
-        }
-    } else {
-        if (mybutton) {
-            mybutton.style.display = "none";
-        }
-    }
-}
+const sections: Section[] = [
+  { id: 'aboutme', component: AboutMe },
+  { id: 'skills', component: Skills },
+  { id: 'experience', component: Experience },
+  { id: 'education', component: Education },
+];
 
-window.addEventListener("scroll", function () {
-    const nav = document.querySelector("nav");
-    const heigth = 100;
-    if (nav) {
-        nav.classList.toggle("scrolling", window.scrollY >= heigth);
-        if (window.scrollY >= heigth) {
-            nav.style.backgroundColor = "black";
-        } else {
-            nav.style.backgroundColor = "transparent";
-        }
-    }
-});
-
-window.onscroll = function () {
-    scrollFunction();
+const Main: FC = () => {
+  return (
+    <main>
+      {sections.map((section) => {
+        const Component = section.component;
+        return (
+          <section key={section.id} id={section.id}>
+            <Component />
+          </section>
+        );
+      })}
+      <ScrollToTopButton />
+    </main>
+  );
 };
 
-const Main = () => {
-    return (
-        <main>{sectionsPage.map(({ id, component }) => <section id={id}>{createElement(component)}</section>)}
-            <span>
-                <button onClick={topFunction} id="myBtn" title="Go to top"></button>
-            </span>
-        </main>
-    )
-}
-
-export default Main
-
+export default Main;

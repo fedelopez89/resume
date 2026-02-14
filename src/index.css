@@ -6,8 +6,8 @@
   --color-effect-twitter: #00aced;
   --color-li-underline: #9fb2da;
   --color-nav-scroll: rgba(0, 0, 0, 0.96);
-  --font-raleway: "Raleway", sans-serif;
-  --font-default: "Abel", Helvetica, Arial, Lucida, sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-default: 'Abel', Helvetica, Arial, Lucida, sans-serif;
   --height-nav: 11vh;
   --height-top-h2-sect: 0vh;
   --header-bkg-img: url(../public/images/portfolio_bkg.png);
@@ -23,7 +23,7 @@
 html,
 body {
   color: var(--color-white);
-  font-family: "Abel", Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Abel', Helvetica, Arial, Lucida, sans-serif;
   font-family: var(--font-raleway);
   width: 100%;
 }

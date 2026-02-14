@@ -79,7 +79,7 @@ form {
 }
 
 .container:after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }
@@ -222,10 +222,10 @@ input {
   -webkit-transition: 300ms 0ms;
 }
 
-[type="reset"],
-[type="submit"],
+[type='reset'],
+[type='submit'],
 button,
-html [type="button"] {
+html [type='button'] {
   -webkit-appearance: button;
 }
 

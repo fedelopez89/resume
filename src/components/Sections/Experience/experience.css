@@ -71,11 +71,11 @@
 }
 
 .exp-details-left > h5::before {
-  content: "......... ";
+  content: '......... ';
   color: transparent;
   width: 20px;
   height: 20px;
-  background-image: url("../../../../public/images/calendar.svg");
+  background-image: url('../../../../public/images/calendar.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -87,11 +87,11 @@
 }
 
 .exp-details-left > h6::before {
-  content: "....... ";
+  content: '....... ';
   color: transparent;
   width: 20px;
   height: 20px;
-  background-image: url("../../../../public/images/location.png");
+  background-image: url('../../../../public/images/location.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

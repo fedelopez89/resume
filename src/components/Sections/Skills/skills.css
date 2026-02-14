@@ -98,7 +98,10 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
   animation: animate-stripes 5s linear infinite;
   background-color: cornflowerblue;
-  background-size: 35px 20px, 100% 100%, 100% 100%;
+  background-size:
+    35px 20px,
+    100% 100%,
+    100% 100%;
   border-radius: 3px;
   position: relative;
 }
@@ -115,7 +118,7 @@ h5[data-value] {
 
 h5[data-value]:after {
   bottom: 9%;
-  content: attr(data-value) "%";
+  content: attr(data-value) '%';
   font-size: 0.65em;
   text-transform: capitalize;
   font-weight: lighter;
