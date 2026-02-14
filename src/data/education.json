@@ -3,30 +3,30 @@
   "educations": [
     {
       "id": "fullstack",
-      "title": "fullstack web development - node.js specialization",
+      "title": "fullstack node.js",
       "institute": {
         "name": "education it",
         "href": "https://www.linkedin.com/school/educacionit/"
       },
       "start": {
-        "month": "august",
+        "month": "january",
         "year": "2020"
       },
       "end": {
-        "month": "september",
+        "month": "december",
         "year": "2021"
       },
       "place": {
         "province": "Buenos Aires",
         "country": "Argentina"
       },
-      "notes": "Advanced full-stack development program covering modern JavaScript, React, Node.js, databases, and deployment strategies."
+      "notes": "Comprehensive full-stack development program covering modern JavaScript, React, Node.js, databases, REST APIs, and deployment strategies."
     },
     {
       "id": "engineering",
       "title": "computer systems engineering",
       "institute": {
-        "name": "national technological university",
+        "name": "national university of technology",
         "href": "https://www.linkedin.com/school/universidad-tecnologica-nacional/"
       },
       "start": {
@@ -35,7 +35,7 @@
       },
       "end": {
         "month": "december",
-        "year": "2015"
+        "year": "2013"
       },
       "place": {
         "province": "Buenos Aires",
@@ -44,25 +44,25 @@
       "notes": "Foundation in computer science, algorithms, data structures, and software engineering principles."
     },
     {
-      "id": "highSchool",
-      "title": "high school program in administration and business",
+      "id": "business",
+      "title": "bachelor's degree in business administration",
       "institute": {
         "name": "institute euskal-echea",
-        "href": "https://www.euskalechea.org.ar/"
+        "href": ""
       },
       "start": {
-        "month": "february",
+        "month": "march",
         "year": "2004"
       },
       "end": {
-        "month": "january",
+        "month": "december",
         "year": "2006"
       },
       "place": {
         "province": "Buenos Aires",
         "country": "Argentina"
       },
-      "notes": ""
+      "notes": "Business administration fundamentals including management, finance, and organizational behavior."
     }
   ]
 }

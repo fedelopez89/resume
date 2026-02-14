@@ -92,7 +92,7 @@ const Header: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          Senior Frontend Developer | React & TypeScript Specialist
+          Frontend-Focused Full Stack Engineer
         </Role>
         <SocialLinks
           initial={{ opacity: 0, y: 20 }}

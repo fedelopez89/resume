@@ -19,25 +19,28 @@ const AboutMe: FC = () => {
         <p>
           Hi! I'm{' '}
           <strong>
-            <u>Federico López</u>
+            <u>Federico Gabriel López</u>
           </strong>
-          , a Senior Frontend Developer with 10+ years of experience in software
-          engineering.
+          , a Senior Frontend Engineer with{' '}
+          <strong>16 years of IT experience</strong> and{' '}
+          <strong>7+ years specializing in modern web development</strong>.
         </p>
         <br />
         <p>
-          Specialized in building high-performance, scalable web applications
-          using modern technologies like
-          <strong> React</strong>, <strong>TypeScript</strong>, and{' '}
-          <strong>Next.js</strong>. I've successfully delivered enterprise
-          solutions for global companies in fintech, healthcare, and wellness
-          industries.
+          Expert in <strong>React</strong>, <strong>TypeScript</strong>, and{' '}
+          <strong>Next.js</strong>, I focus on building high-performance,
+          scalable, and user-centric interfaces. My work has been{' '}
+          <strong>
+            recognized by industry leaders and featured in The New York Times
+          </strong>{' '}
+          for exceptional frontend engineering contributions.
         </p>
         <p>
-          Passionate about clean code, performance optimization, and creating
-          exceptional user experiences. I thrive in collaborative environments
-          and enjoy mentoring teams while staying current with the latest
-          frontend technologies and best practices.
+          Passionate about solving complex UX challenges, driving product
+          quality through clean architecture and reusable components. I thrive
+          in remote Agile environments, collaborating with cross-functional
+          teams to deliver impactful solutions for global companies in wellness,
+          sports, fintech, and healthcare industries.
         </p>
       </Description>
       <PhotoContainer
