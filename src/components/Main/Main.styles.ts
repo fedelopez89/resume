@@ -10,9 +10,11 @@ export const MainContainer = styled(motion.main)`
 export const Section = styled(motion.section)`
   padding: ${({ theme }) => `${theme.spacing['4xl']} 0`};
   position: relative;
+  scroll-margin-top: 70px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: ${({ theme }) => `${theme.spacing['3xl']} 0`};
+    scroll-margin-top: 70px;
   }
 
   &:nth-child(even) {

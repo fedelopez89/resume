@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useNavbarScroll } from '@/hooks';
+import { useNavbarScroll, useScrollSpy } from '@/hooks';
 import {
   HeaderContainer,
   Navbar,
@@ -17,10 +17,11 @@ import {
 } from './Header.styles';
 
 const navItems = [
-  { href: '#aboutme', label: 'ABOUT ME' },
-  { href: '#skills', label: 'SKILLS' },
-  { href: '#experience', label: 'EXPERIENCE' },
-  { href: '#education', label: 'EDUCATION' },
+  { href: '#aboutme', label: 'ABOUT ME', id: 'aboutme' },
+  { href: '#projects', label: 'PROJECTS', id: 'projects' },
+  { href: '#experience', label: 'EXPERIENCE', id: 'experience' },
+  { href: '#languages', label: 'LANGUAGES', id: 'languages' },
+  { href: '#education', label: 'EDUCATION', id: 'education' },
 ];
 
 const socialLinks = [
@@ -38,6 +39,9 @@ const socialLinks = [
 
 const Header: FC = () => {
   const { isScrolled } = useNavbarScroll(100);
+  const activeSection = useScrollSpy({
+    sectionIds: ['home', ...navItems.map((item) => item.id)],
+  });
 
   return (
     <HeaderContainer id="home" as="header" role="banner">
@@ -54,7 +58,7 @@ const Header: FC = () => {
           <Logo
             href="#home"
             aria-label="Home"
-            whileHover={{ scale: 1.05 }}
+            $isScrolled={isScrolled}
             whileTap={{ scale: 0.95 }}
           >
             HOME
@@ -74,12 +78,13 @@ const Header: FC = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
-                whileHover={{ y: -2 }}
               >
                 <NavLink
                   href={item.href}
                   role="menuitem"
                   aria-label={item.label}
+                  $isScrolled={isScrolled}
+                  $isActive={activeSection === item.id}
                 >
                   {item.label}
                 </NavLink>
@@ -106,7 +111,7 @@ const Header: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          Frontend-Focused Full Stack Engineer
+          Senior Frontend Engineer
         </Role>
         <SocialLinks
           initial={{ opacity: 0, y: 20 }}
@@ -125,7 +130,6 @@ const Header: FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={link.label}
-                whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <i className={link.icon} aria-hidden="true" />

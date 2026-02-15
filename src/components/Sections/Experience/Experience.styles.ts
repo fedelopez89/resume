@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Button } from '../../ui';
 
 export const ExperienceContainer = styled.div`
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${({ theme }) => theme.spacing.lg};
 
@@ -14,14 +13,12 @@ export const ExperienceContainer = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.spacing['3xl']};
-  flex-wrap: wrap;
-  gap: ${({ theme }) => theme.spacing.lg};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    flex-direction: column;
+    margin-bottom: ${({ theme }) => theme.spacing['2xl']};
   }
 `;
 
@@ -31,13 +28,38 @@ export const Title = styled(motion.h1)`
   margin: 0;
 `;
 
-export const DownloadButton = styled(Button)`
-  display: flex;
+export const DownloadButton = styled.a`
+  display: inline-flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing.sm};
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: ${({ theme }) => theme.colors.primary};
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryHover};
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
+  }
 
   i {
-    font-size: ${({ theme }) => theme.typography.fontSize.lg};
+    font-size: 16px;
   }
 `;
 

@@ -5,9 +5,10 @@ import { MainContainer, Section } from './Main.styles';
 
 // Lazy load sections for better performance
 const AboutMe = lazy(() => import('../Sections/AboutMe/AboutMe'));
-const Skills = lazy(() => import('../Sections/Skills/Skills'));
+const Projects = lazy(() => import('../Sections/Projects/Projects'));
 const Experience = lazy(() => import('../Sections/Experience/Experience'));
 const Education = lazy(() => import('../Sections/Education/Education'));
+const Languages = lazy(() => import('../Sections/Languages/Languages'));
 
 interface SectionConfig {
   id: string;
@@ -16,8 +17,9 @@ interface SectionConfig {
 
 const sections: SectionConfig[] = [
   { id: 'aboutme', component: AboutMe },
-  { id: 'skills', component: Skills },
+  { id: 'projects', component: Projects },
   { id: 'experience', component: Experience },
+  { id: 'languages', component: Languages },
   { id: 'education', component: Education },
 ];
 

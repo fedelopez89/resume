@@ -58,15 +58,18 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const Logo = styled(motion.a)`
+export const Logo = styled(motion.a)<{ $isScrolled?: boolean }>`
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme, $isScrolled }) =>
+    $isScrolled ? theme.colors.text : theme.colors.background};
   text-decoration: none;
   letter-spacing: ${({ theme }) => theme.typography.letterSpacing.wide};
+  transition: color ${({ theme }) => theme.transitions.fast};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme, $isScrolled }) =>
+      $isScrolled ? theme.colors.primary : theme.colors.background};
   }
 `;
 
@@ -84,8 +87,9 @@ export const NavMenu = styled(motion.ul)`
 
 export const NavItem = styled(motion.li)``;
 
-export const NavLink = styled.a`
-  color: ${({ theme }) => theme.colors.background};
+export const NavLink = styled.a<{ $isScrolled?: boolean; $isActive?: boolean }>`
+  color: ${({ theme, $isScrolled }) =>
+    $isScrolled ? theme.colors.text : theme.colors.background};
   text-decoration: none;
   font-size: ${({ theme }) => theme.typography.fontSize.sm};
   font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
@@ -102,14 +106,16 @@ export const NavLink = styled.a`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
+    width: ${({ $isActive }) => ($isActive ? '80%' : '0')};
     height: 2px;
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme, $isScrolled }) =>
+      $isScrolled ? theme.colors.primary : theme.colors.background};
     transition: width ${({ theme }) => theme.transitions.fast};
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme, $isScrolled }) =>
+      $isScrolled ? theme.colors.primary : theme.colors.background};
 
     &::after {
       width: 80%;

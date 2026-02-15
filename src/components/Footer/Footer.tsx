@@ -49,7 +49,6 @@ const Footer: FC = () => {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <i className={classname} aria-hidden="true" />

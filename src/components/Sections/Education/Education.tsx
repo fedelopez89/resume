@@ -1,9 +1,9 @@
 import { FC, useMemo } from 'react';
 import educationHistory from '../../../data/education.json';
 import type { EducationConfig } from '@/types';
+import { SectionTitle } from '../shared/SectionTitle';
 import {
   EducationContainer,
-  Title,
   Timeline,
   EducationCard,
   DateAndLocation,
@@ -48,14 +48,14 @@ const Education: FC = () => {
 
   return (
     <EducationContainer>
-      <Title
+      <SectionTitle
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         education
-      </Title>
+      </SectionTitle>
       <Timeline>{educationItems}</Timeline>
     </EducationContainer>
   );

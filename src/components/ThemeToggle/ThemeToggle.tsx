@@ -55,7 +55,6 @@ export const ThemeToggle: FC = () => {
     <ToggleButton
       onClick={toggleTheme}
       whileTap={{ scale: 0.9 }}
-      whileHover={{ scale: 1.05 }}
       aria-label={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
       title={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
     >

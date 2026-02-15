@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import experienceHistory from '../../../data/experience.json';
 import type { ExperienceConfig, Experience as ExperienceType } from '@/types';
+import { SectionTitle } from '../shared/SectionTitle';
 import {
   ExperienceContainer,
   Header,
-  Title,
   DownloadButton,
   Timeline,
   ExperienceCard,
@@ -28,23 +28,20 @@ const Experience: FC = () => {
 
   return (
     <ExperienceContainer>
+      <SectionTitle
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        experience
+      </SectionTitle>
       <Header>
-        <Title
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          experience
-        </Title>
         <DownloadButton
-          as="a"
           href="./pdf/Resume_LOPEZ_Federico.pdf"
           download="Resume_LOPEZ_Federico.pdf"
           target="_blank"
           rel="noreferrer"
-          variant="primary"
-          size="md"
         >
           <i className="fa fa-download" aria-hidden="true" />
           RESUME
