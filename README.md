@@ -50,6 +50,39 @@ _Showcasing 16 years of IT experience with 7+ years specializing in modern front
 
 ---
 
+## 🏆 Featured Projects
+
+### 🌟 AI Evaluation Platform Clones (Featured in NYT)
+
+Production-ready replicas built for REAL Evals AI testing platform:
+
+- **Gmail Clone** - Full email management with labels, search, compose | [Demo](https://real-gomail.vercel.app/)
+- **DoorDash Clone** - Restaurant browsing, cart, checkout | [Demo](https://real-dashdish.vercel.app/)
+- **Uber Clone** - Real-time maps, route calculation | [Demo](https://real-udriver.vercel.app/)
+- **United Airlines** - Flight search, seat selection, booking | [Demo](https://real-flyunified.vercel.app/)
+
+**Tech**: React, TypeScript, Next.js, Material UI, Redux
+
+### 🏈 RCX Sports League Finders
+
+Enterprise search platforms for fantasy sports leagues:
+
+- **NFL League Finder** - [nfl.playrcx.com](https://nfl.playrcx.com/)
+- **NBA League Finder** - [jrnba.playrcx.com](https://jrnba.playrcx.com/)
+- **NHL League Finder** - [street.playrcx.com](https://street.playrcx.com/)
+- **MLS League Finder** - [go.playrcx.com](https://go.playrcx.com/)
+
+**Tech**: React, TypeScript, Next.js, Context API, Chakra UI, Google Maps API, REST API
+
+### 💼 FactuPro - Invoice Management SaaS
+
+Complete billing system for SMBs with payment tracking and automation.  
+[Live Demo](https://app.factupro.es/login)
+
+**Tech**: Next.js, Shadcn UI, React Hook Form, Tailwind CSS, SSR, CI/CD
+
+---
+
 ## 📊 Performance Metrics
 
 ```
@@ -233,17 +266,33 @@ This project is [MIT](LICENSE) licensed.
 
 ---
 
-## 👤 Author
+## 👤 About Me
 
 <div align="center">
 
-**Federico López**
+**Federico López**  
+_Senior Frontend Engineer_
 
-_Senior Frontend Engineer | 16 Years IT Experience | 7+ Years Modern Web Development_
+🎯 **16 Years IT Experience** | 7+ Years Modern Frontend Development  
+🌟 **Featured in The New York Times** for innovative AI evaluation platform  
+🌍 **100% Remote** | Working with global clients across 3 continents  
+💼 **7+ Enterprise Clients** | Bonzzu, Science37, Vrio, REAL Evals
+
+### Specializations
+
+`React` `TypeScript` `Next.js` `Redux` `Performance Optimization` `Component Architecture`
+
+### Career Highlights
+
+- 🏢 **Senior Frontend Engineer @ Bonzzu** (2022 - Present)
+- 🎨 **Built 4 production clones featured by NYT** for REAL Evals
+- 🏈 **Developed 4 fantasy sports platforms** for RCX Sports
+- 💰 **Created enterprise invoicing SaaS** from scratch (FactuPro)
+- 🏦 **6+ years in fintech** (ICBC, BBVA) building mission-critical systems
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-federicoglopez-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/federicoglopez/)
-[![GitHub](https://img.shields.io/badge/GitHub-fedelopez89-181717?style=for-the-badge&logo=github)](https://github.com/fedelopez89)
-[![Email](https://img.shields.io/badge/Email-fede.lopez89@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fede.lopez89@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-success?style=for-the-badge&logo=vercel)](https://fedelopez89.github.io/resume)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fede.lopez89@gmail.com)
 
 </div>
 

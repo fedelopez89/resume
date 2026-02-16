@@ -9,17 +9,6 @@ import {
   SectionSubtitle,
 } from '../shared/SectionTitle';
 
-const techStack = [
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Next.js',
-  'Redux',
-  'Tailwind CSS',
-  'Node.js',
-  'REST APIs',
-];
-
 const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
@@ -27,37 +16,6 @@ const Section = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 0 ${({ theme }) => theme.spacing.md};
-  }
-`;
-
-const TechStackContainer = styled(motion.div)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-`;
-
-const TechBadge = styled(motion.span)`
-  padding: 0.5rem 1rem;
-  background: ${({ theme }) => theme.colors.primary}15;
-  color: ${({ theme }) => theme.colors.primary};
-  border: 1px solid ${({ theme }) => theme.colors.primary}30;
-  border-radius: ${({ theme }) => theme.borderRadius.base};
-  font-size: ${({ theme }) => theme.typography.fontSize.sm};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
-  cursor: default;
-  transition: all ${({ theme }) => theme.transitions.fast};
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.primary}25;
-    border-color: ${({ theme }) => theme.colors.primary};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: ${({ theme }) => theme.typography.fontSize.xs};
-    padding: 0.4rem 0.8rem;
   }
 `;
 
@@ -163,30 +121,11 @@ const Projects: React.FC = () => {
         </SectionSubtitle>
       </SectionHeader>
 
-      <TechStackContainer
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        {techStack.map((tech, index) => (
-          <TechBadge
-            key={tech}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }}
-          >
-            {tech}
-          </TechBadge>
-        ))}
-      </TechStackContainer>
-
       <FilterContainer
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         role="group"
         aria-label="Filter projects by technology"
       >
