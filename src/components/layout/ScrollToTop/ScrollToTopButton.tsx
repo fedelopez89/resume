@@ -20,17 +20,22 @@ const StyledButton = styled.a`
   align-items: center;
   justify-content: center;
   box-shadow: ${({ theme }) => theme.shadows.lg};
-  transition: all ${({ theme }) => theme.transitions.fast};
+  transition: all 0.2s ease;
   text-decoration: none;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryHover};
-    transform: scale(1.05);
-    box-shadow: ${({ theme }) => theme.shadows.xl};
+    color: white;
+    transform: translateY(-2px);
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {

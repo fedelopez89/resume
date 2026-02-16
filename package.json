@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "homepage": "http://fedelopez89.github.io/resume",
+  "homepage": "http://fedelopez89.github.io/federico-lopez-portfolio",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
     "framer-motion": "^12.34.0",

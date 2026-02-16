@@ -4,6 +4,7 @@ import path from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
+  base: '/federico-lopez-portfolio/',
   plugins: [
     react(),
     visualizer({
@@ -13,7 +14,7 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
-  
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -25,21 +26,16 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
     },
   },
-  
+
   server: {
     port: 3000,
     open: true,
   },
-  
+
   build: {
     outDir: 'dist',
     sourcemap: true,
-    minify: 'terser',
-    terserOptions: {
-      format: {
-        comments: false,
-      },
-    },
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
