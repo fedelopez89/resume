@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { useNavbarScroll, useScrollSpy } from '@/hooks';
 import {
   HeaderContainer,
@@ -14,6 +14,11 @@ import {
   SocialLinks,
   SocialItem,
   SocialLink,
+  MobileMenuButton,
+  MobileMenuOverlay,
+  MobileMenu,
+  MobileCloseButton,
+  MobileNavLink,
 } from './Header.styles';
 
 const navItems = [
@@ -42,6 +47,15 @@ const Header: FC = () => {
   const activeSection = useScrollSpy({
     sectionIds: ['home', ...navItems.map((item) => item.id)],
   });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <HeaderContainer id="home" as="header" role="banner">
@@ -63,6 +77,16 @@ const Header: FC = () => {
           >
             HOME
           </Logo>
+
+          <MobileMenuButton
+            onClick={handleMobileMenuToggle}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+            $isScrolled={isScrolled}
+          >
+            <i className="fa fa-bars" aria-hidden="true" />
+          </MobileMenuButton>
+
           <NavMenu
             as="ul"
             role="menubar"
@@ -93,6 +117,42 @@ const Header: FC = () => {
           </NavMenu>
         </NavContainer>
       </Navbar>
+
+      {/* Mobile Menu Overlay */}
+      <MobileMenuOverlay
+        $isOpen={isMobileMenuOpen}
+        onClick={handleMobileLinkClick}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isMobileMenuOpen ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        style={{ pointerEvents: isMobileMenuOpen ? 'auto' : 'none' }}
+      />
+
+      {/* Mobile Menu */}
+      <MobileMenu
+        $isOpen={isMobileMenuOpen}
+        initial={{ x: '100%' }}
+        animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
+        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      >
+        <MobileCloseButton
+          onClick={handleMobileMenuToggle}
+          aria-label="Close mobile menu"
+        >
+          <i className="fa fa-times" aria-hidden="true" />
+        </MobileCloseButton>
+
+        {navItems.map((item) => (
+          <MobileNavLink
+            key={item.href}
+            href={item.href}
+            onClick={handleMobileLinkClick}
+            $isActive={activeSection === item.id}
+          >
+            {item.label}
+          </MobileNavLink>
+        ))}
+      </MobileMenu>
 
       <HeaderIntro
         initial={{ opacity: 0, y: 50 }}

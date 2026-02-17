@@ -10,6 +10,10 @@ export const HeaderContainer = styled.header`
   background-size: cover;
   background-attachment: fixed;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    background-attachment: scroll;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -82,6 +86,100 @@ export const NavMenu = styled(motion.ul)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;
+  }
+`;
+
+export const MobileMenuButton = styled.button<{ $isScrolled?: boolean }>`
+  display: none;
+  background: none;
+  border: none;
+  color: ${({ theme, $isScrolled }) =>
+    $isScrolled ? theme.colors.text : theme.colors.background};
+  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
+  cursor: pointer;
+  padding: ${({ theme }) => theme.spacing.sm};
+  transition: color ${({ theme }) => theme.transitions.fast};
+  z-index: ${({ theme }) => theme.zIndex.modal + 1};
+
+  &:hover {
+    color: ${({ theme, $isScrolled }) =>
+      $isScrolled ? theme.colors.primary : theme.colors.background};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: block;
+  }
+`;
+
+export const MobileMenuOverlay = styled(motion.div)<{ $isOpen: boolean }>`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: ${({ theme }) => theme.zIndex.modal};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: block;
+  }
+`;
+
+export const MobileMenu = styled(motion.div)<{ $isOpen: boolean }>`
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 320px;
+  background: ${({ theme }) => theme.colors.background};
+  box-shadow: ${({ theme }) => theme.shadows.xl};
+  z-index: ${({ theme }) => theme.zIndex.modal + 1};
+  padding: ${({ theme }) => theme.spacing.xl};
+  overflow-y: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.spacing.md};
+  }
+`;
+
+export const MobileCloseButton = styled.button`
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
+  cursor: pointer;
+  padding: ${({ theme }) => theme.spacing.sm};
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  transition: color ${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+export const MobileNavLink = styled.a<{ $isActive?: boolean }>`
+  display: block;
+  color: ${({ theme }) => theme.colors.text};
+  text-decoration: none;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+  letter-spacing: ${({ theme }) => theme.typography.letterSpacing.wide};
+  text-transform: uppercase;
+  padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.xl}`};
+  border-radius: ${({ theme }) => theme.borderRadius.base};
+  transition: all ${({ theme }) => theme.transitions.fast};
+  background: ${({ $isActive, theme }) =>
+    $isActive ? theme.colors.primaryLight : 'transparent'};
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryLight};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
